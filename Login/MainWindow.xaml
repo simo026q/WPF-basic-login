@@ -1,0 +1,34 @@
+﻿<Window x:Class="Login.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Login"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="270" Width="300">
+    <TabControl Margin="5">
+        <TabItem Header="Sign In">
+            <StackPanel Margin="10">
+                <Label Content="Username / Email"/>
+                <TextBox Name="SigninUsername"/>
+                <Label Content="Password"/>
+                <PasswordBox Name="SigninPassword"/>
+                <Button Name="BtnSignIn" Content="Sign In" Margin="0 20 0 0" Click="BtnSignIn_Click"/>
+            </StackPanel>
+        </TabItem>
+        <TabItem Header="Sign Up">
+            <StackPanel Margin="10">
+                <Label Content="Username"/>
+                <TextBox Name="SignupUsername"/>
+                <Label Content="Email"/>
+                <TextBox Name="SignupEmail"/>
+                <Label Content="Password"/>
+                <PasswordBox Name="SignupPassword"/>
+                <Button Name="BtnSignUp" Content="Sign Up" Margin="0 20 0 0" Click="BtnSignUp_Click"/>
+            </StackPanel>
+        </TabItem>
+        <TabItem Name="TabUsers" Header="Users" Visibility="Hidden">
+            <DataGrid Margin="5" Name="DataGridUsers"/>
+        </TabItem>
+    </TabControl>
+</Window>
